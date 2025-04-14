@@ -48,7 +48,7 @@ stats
 ```
 telnet 127.0.0.1 11211
 ```
-Ввод ключей.  
+Ввод ключей, где ttl=5.  
 ```
 set name 0 5 9
 ```
@@ -80,7 +80,9 @@ get name
 sudo docker run --name redis -d redis
 ```
 Подключение к контейнеру redis с помощью консоли redis-cli.  
-```sudo docker exec -it redis redis-cli```
+```
+sudo docker exec -it redis redis-cli
+```
 Ввод  ключей с разными именами.  
 ```
 set name1 EskinIgor
@@ -93,5 +95,5 @@ get name1
 get name2
 get name3
 ```
-![](https://github.com/eskin-igor/netology_11-2/blob/main/11-2/11-2-3.JPG)
+![](https://github.com/eskin-igor/netology_11-2/blob/main/11-2/11-2-4.JPG)
 
