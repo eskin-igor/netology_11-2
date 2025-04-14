@@ -28,7 +28,7 @@
 ```
 sudo docker run -d -p 11211:11211 --name memcached --rm memcached
 ```
-Проврка работоспособности. Например, подключение к Memcached по telnet.  
+Проверка работоспособности. Например, подключение к Memcached по telnet.  
 ```
 telnet 127.0.0.1 11211
 ```
