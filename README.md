@@ -23,16 +23,18 @@
 
 ## Решение 2.
 
-Скачивание и запуск Memcached в docker контейнере.
+Я решил запустить Memcached в docker контейнере.  
+Скачивание и запуск.  
 ```
 sudo docker run -d -p 11211:11211 --name memcached --rm memcached
 ```
-Подключение к Memcached по telnet.
+Проврка работоспособности. Например, подключение к Memcached по telnet.  
 ```
 telnet 127.0.0.1 11211
 ```
-Запрос статистики Memcached.
-```stats
+И запрос статистики Memcached.  
+```
+stats
 ```
 ![](https://github.com/eskin-igor/netology_11-2/blob/main/11-2/11-2-2.JPG)
 
@@ -42,18 +44,28 @@ telnet 127.0.0.1 11211
 Приведите скриншот, на котором видно, что спустя 5 секунд ключи удалились из базы.
 
 ## Решение 3. 
-Подключение к Memcached по telnet.
-```telnet 127.0.0.1 11211```
-Ввод ключей.
-```set name 0 5 9```
-Ввод имени.
-```EskinIgor```
-```set name 0 5 5
+Подключение к Memcached по telnet.  
+```
+telnet 127.0.0.1 11211
+```
+Ввод ключей.  
+```
+set name 0 5 9
+```
+Ввод имени.  
+```
+EskinIgor
+```
+```
+set name 0 5 5
 Eskin
 set name 0 5 4
-Igor```
-Запрос ключа name.
-```get name```
+Igor
+```
+Запрос ключа name.  
+```
+get name
+```
 ![](https://github.com/eskin-igor/netology_11-2/blob/main/11-2/11-2-3.JPG)
  
 ## Задание 4. Запись данных в Redis
@@ -63,17 +75,23 @@ Igor```
 
 ## Решение 4.
 
-Скачивание и запуск redis в docker контейнере.
-```sudo docker run --name redis -d redis```
-Подключение к контейнеру redis с помощью консоли redis-cli.
+Скачивание и запуск redis в docker контейнере.  
+```
+sudo docker run --name redis -d redis
+```
+Подключение к контейнеру redis с помощью консоли redis-cli.  
 ```sudo docker exec -it redis redis-cli```
-Ввод  ключей с разными именами.
-```set name1 EskinIgor
+Ввод  ключей с разными именами.  
+```
+set name1 EskinIgor
 set name2 Eskin
-set name3 Igor```
-Запрос записанных ключей. 
-```get name1
+set name3 Igor
+```
+Запрос записанных ключей.  
+```
+get name1
 get name2
-get name3```
+get name3
+```
 ![](https://github.com/eskin-igor/netology_11-2/blob/main/11-2/11-2-3.JPG)
 
